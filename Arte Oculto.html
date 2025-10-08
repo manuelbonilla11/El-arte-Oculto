@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brujería Blanca y Negra: El Arte Oculto</title>
+    <meta name="description" content="Explora la brujería blanca y negra: sus diferencias, usos, símbolos y advertencias. Descubre el mundo de la magia ancestral con respeto y conocimiento.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: #f0f0f0;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+
+        p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(45deg, #8a2be2, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Main sections */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .intro {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 10, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+        }
+
+        .blanca, .negra {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .blanca-content, .negra-content {
+            grid-column: 1 / -1;
+        }
+
+        .symbols {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .symbol {
+            font-size: 2rem;
+            color: #8a2be2;
+            text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #8a2be2;
+        }
+
+        .warning {
+            background: rgba(220, 20, 60, 0.1);
+            border-left: 4px solid #dc143c;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        /* Botón WhatsApp */
+        .whatsapp-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-btn i {
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(138, 43, 226, 0.2);
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .blanca, .negra {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-btn {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .symbols {
+                justify-content: center;
+            }
+
+            .symbol {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">✦ El Arte Oculto ✦</div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Introductoria -->
+        <section class="intro" id="intro">
+            <h1>Brujería Blanca y Negra: El Equilibrio de las Sombras y la Luz</h1>
+            <p>La brujería es un arte ancestral que conecta con las energías del universo, la naturaleza y lo espiritual. La <strong>brujería blanca</strong> se centra en prácticas positivas, de sanación y armonía, utilizando intenciones puras para el bien mayor. En contraste, la <strong>brujería negra</strong> involucra manipulaciones de energías oscuras, a menudo para protección agresiva o venganza, pero conlleva riesgos éticos y kármicos significativos. Ambas formas requieren respeto, conocimiento y responsabilidad, ya que la magia es un espejo de nuestras intenciones.</p>
+            <div class="symbols">
+                <div class="symbol"><i class="fas fa-moon"></i></div>
+                <div class="symbol"><i class="fas fa-star"></i></div>
+                <div class="symbol"><i class="fas fa-gem"></i></div>
+                <div class="symbol"><i class="fas fa-crow"></i></div>
+            </div>
+        </section>
+
+        <!-- Sección Brujería Blanca -->
+        <section class="blanca" id="blanca">
+            <div class="blanca-content">
+                <h2>Brujería Blanca: La Magia de la Luz</h2>
+                <p>La brujería blanca es una práctica benevolente que busca equilibrar y elevar las energías positivas. Se basa en principios éticos como "daño a nadie" y se enfoca en el empoderamiento personal y colectivo. Sus raíces se remontan a tradiciones paganas, wiccanas y chamánicas, donde la conexión con la naturaleza es fundamental.</p>
+                
+                <h3>Usos y Ejemplos</h3>
+                <ul>
+                    <li><strong>Protección y Limpieza:</strong> Rituales con sal, salvia o cristales para eliminar energías negativas de un hogar o persona.</li>
+                    <li><strong>Amor y Relaciones:</strong> Hechizos para atraer amor sano o fortalecer lazos existentes, usando velas rosadas y hierbas como la lavanda.</li>
+                    <li><strong>Abundancia y Prosperidad:</strong> Invocaciones a deidades de la fertilidad con ofrendas de miel y monedas para atraer riqueza ética.</li>
+                    <li><strong>Sanación:</strong> Meditaciones guiadas con cuarzos para aliviar el estrés emocional o físico.</li>
+                </ul>
+
+                <h3>Símbolos Comunes</h3>
+                <p>Los símbolos en la brujería blanca representan pureza y conexión natural:</p>
+                <div class="symbols">
+                    <div class="symbol"><i class="fas fa-leaf"></i> (Naturaleza)</div>
+                    <div class="symbol"><i class="fas fa-dove"></i> (Paz)</div>
+                    <div class="symbol"><i class="fas fa-circle"></i> (Luna Creciente)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Brujería Negra -->
+        <section class="negra" id="negra">
+            <div class="negra-content">
+                <h2>Brujería Negra: Las Sombras del Poder</h2>
+                <p>La brujería negra, también conocida como magia oscura, implica el uso de fuerzas intensas para influir en la realidad de manera directa y a veces coercitiva. Históricamente, se asocia con tradiciones africanas, europeas medievales y mitos como las brujas de Salem. Sin embargo, su práctica moderna enfatiza la precaución, ya que puede generar consecuencias kármicas o backlash energético.</p>
+                
+                <div class="warning">
+                    <strong>Advertencia:</strong> La brujería negra no es para principiantes. Puede causar daño no intencionado, atraer entidades negativas y violar principios éticos universales. Siempre consulta a un experto y considera las repercusiones espirituales antes de intentarlo.
+                </div>
+
+                <h3>Historia y Mitos</h3>
+                <ul>
+                    <li><strong>Orígenes:</strong> Surgió en culturas antiguas como la egipcia y vudú, donde se usaba para maldiciones o protección contra enemigos.</li>
+                    <li><strong>Mitos Populares:</strong> Historias de pactos con demonios o el "mal de ojo", popularizadas en la literatura gótica y el folclore europeo.</li>
+                    <li><strong>Evolución Moderna:</strong> Hoy se ve en prácticas como el hoodoo o santería, pero con énfasis en el equilibrio para evitar el caos.</li>
+                </ul>
+
+                <h3>Usos y Advertencias</h3>
+                <ul>
+                    <li><strong>Justicia Kármica:</strong> Hechizos de retorno para que el mal regrese al emisor, usando muñecos o velas negras – pero con riesgo de amplificación.</li>
+                    <li><strong>Protección Agresiva:</strong> Barreras contra maldiciones, con elementos como obsidiana – advierten de aislamiento emocional.</li>
+                    <li><strong>Manipulación:</strong> Influir en decisiones ajenas, como en rivalidades – altamente desaconsejado por su impacto en el libre albedrío.</li>
+                </ul>
+
+                <h3>Símbolos Comunes</h3>
+                <p>Representan poder y misterio, pero úsalos con cautela:</p>
+                <div class="symbols">
+                    <div class="symbol"><i class="fas fa-skull"></i> (Transformación)</div>
+                    <div class="symbol"><i class="fas fa-fire"></i> (Fuerza)</div>
+                    <div class="symbol"><i class="fas fa-eye-slash"></i> (Ocultamiento)</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20una%20consulta%20personalizada%20sobre%20brujer%C3%ADa%20blanca%20o%20negra.%20%C2%BFPueden%20ayudarme%3F" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Consulta Personalizada
+    </a>
+
+    <footer>
+        <p>&copy; 2024 El Arte Oculto. Información educativa. No promueve prácticas ilegales o dañinas. Consulta siempre a profesionales éticos.</p>
+    </footer>
+
+    <script>
+        // JavaScript mínimo: Smooth scroll para anclas (opcional, pero mejora UX)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Detectar clic en botón WhatsApp y log para analytics (opcional)
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            console.log('Botón WhatsApp clicado');
+            // Aquí podrías integrar Google Analytics o similar
+        });
+    </script>
+</body>
+</html>
